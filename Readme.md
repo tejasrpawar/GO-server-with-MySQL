@@ -22,14 +22,14 @@ I am using the latest Docker image.
 
 Use the following string as the connector string in the GO code:
 
-`root:root@tcp(127.0.0.1:3306)/restsimple?charset=utf8&parseTime=True&loc=Local`
+`<User>:<password>@tcp(127.0.0.1:3306)/<database name>?charset=utf8&parseTime=True&loc=Local`
 
 
 ### Troubleshooting Connection Issues
 
 If there are any connection issues, ensure the MySQL container is configured to the correct port and host with this command:
 
-`docker run --name mysql_db -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -d mysql_db`
+`docker run --name mysql_db -e MYSQL_ROOT_PASSWORD=<password> -p 3306:3306 -d mysql_db`
 
 
 ### Verify Connection to the MySQL Server
